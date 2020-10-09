@@ -3,7 +3,7 @@ include 'app/Vehicles.php';
 
 $data = new Vehicles;
 $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$baseUrl = '/WebProjects/backend';
+$baseUrl = '/WebProjects/UCC-Test/backend';
 
 switch ($request) 
 {
