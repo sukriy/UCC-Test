@@ -1,4 +1,3 @@
 <?php
-include 'app/Connection.php';
-$connection = new Connection;
-$connection->get_connection();
+    include 'app/Vehicles.php';
+    $data = new Vehicles;
