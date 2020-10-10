@@ -218,7 +218,7 @@ export default {
     methods: {
         reset: function () {
             axios
-                .get("http://localhost/WebProjects/UCC-Test/backend/reset")
+                .put("http://localhost:8000/")
                 .then((response) => {
                     this.lists = response.data.data;
                 })
@@ -261,10 +261,7 @@ export default {
             formdata.append("location", this.form.location);
 
             axios
-                .post(
-                    "http://localhost/WebProjects/UCC-Test/backend/store",
-                    formdata
-                )
+                .post("http://localhost:8000/", formdata)
                 .then((response) => {
                     if (response.data.success) {
                         this.form.name = "";
@@ -283,7 +280,7 @@ export default {
         },
         loadList: function () {
             axios
-                .get("http://localhost/WebProjects/UCC-Test/backend/", {
+                .get("http://localhost:8000/", {
                     params: {
                         column: this.sort.column,
                         sortby: this.sort.sortby,

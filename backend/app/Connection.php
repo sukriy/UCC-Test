@@ -4,10 +4,10 @@ $driver->report_mode = MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR;
 
 class Connection 
 {
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $database = "devDB";
+    private $servername = "db";
+    private $username = "devuser";
+    private $password = "devpass";
+    private $database = "test_db";
     private $connection;
 
     public function get_connection()
